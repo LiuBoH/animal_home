@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.t1 img{
+    width: 1226px;
+    height: 460px;
+}
+.s1{
+    width: 1226px;
+    height: 460px;
+    margin: 50px auto;
+    position: relative;
+    bottom: 50px;
+}
+.s2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 234px;
+    height: 460px;
+    background: #000000;
+    z-index:10;
+    opacity: 0.8;
+}
+.s2 li{
+    width: 234px;
+    height: 46px;
+    text-align: center;
+}
+.s2 li:hover{
+    background-color: chocolate;
+}
+.s2-ul span{
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    font-size: 16px;
+}
+.s2-ul a{
+    text-decoration: none;
+    color: white;
+}
+.t1 li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.t2 li{
+    width: 20px;
+    height: 20px;
+    background: white;
+    font-size: 14px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.t2 li.active{
+    background-color: chocolate;
+}
+.t2{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+}
+.s1 .anniu{
+    width: 30px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+}
+.s1 .left{
+    left: 234px;
+}
+.s1 .right{
+    right: 0;
+}
+.dingbu-right{
+    display: inline-block;
+    float: right;
+    position: relative;
+    right: 300px;
+}
+.dingbu-right div{
+    padding: 20px;
+}
+.dingbu{
+    background: black;
+    line-height: 40px;
+}
+.dingbu a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    opacity: 0.5;
+    padding:6px;
+}
+.dingbu a:hover{
+    opacity: 1;
+}
+.s3{
+    position: relative;
+    bottom: 80px;
+    left: 140px;
+}
+.s3-img-1{
+    position: relative;
+    right: 155px;
+}
+.s3-img-2{
+    position: relative;
+    right: 155px;
+}
+.s3-img-3{
+    position: relative;
+    right: 135px;
+}
+.s3-img-4{
+    position: relative;
+    right: 115px;
+}
+.s4-1{
+    width: 234px;
+    height: 340px;
+    background: white;
+    border-top: 2px solid red;
+}
+.s4-headfont{
+    font-size: 22px;
+}
+.s4{
+    position: relative;
+    left: 60px;
+}
+.list-1{
+    position: relative;
+    left: 200px;
+}
+.denglu-font{
+    position: relative;
+    left: 160px;
+}
+#img1{
+    position: absolute;
+    left: 230px;
+}
+.denglu-font2{
+    position: relative;
+    display: inline;
+    left: 450px;
+}
+.s4-123{
+    position: relative;
+    left: 100px;
+}
+.img-logo{
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+.list-1{
+    position: relative;
+    bottom: 20px;
+}
+.list-ul-2 li{
+    display: inline;
+    margin-left: 40px;
+}
+.list-ul-2 li a{
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+}
+.list-ul-2 li a:hover{
+    color: coral;
+}
+.dingbu a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    opacity: 0.5;
+    padding:6px;
+}
+.list-1 a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 13px;
+    opacity: 0.5;
+    left:150px;
+    padding:6px;
+}
+.list-1 a:hover{
+    opacity: 1;
+}
+.dingbu a:hover{
+    opacity: 1;
+}
+.dingbu{
+    background: black;
+    line-height: 40px;
+}
+#list-show-1{
+    width: 1226px;
+    height: 1272px;
+    border: solid red 1px;
+    margin: 0 auto;
+}
+#list-show-2{
+    width: 1226px;
+    height: 460px;
+    border: solid blue 1px;
+    margin: 0 auto;
+}
+#list-left{
+    width: 234px;
+    height: 460px;
+    border: solid green 1px;
+    float: left;
+    background: rgba(0,0,0,0.8);
+    position: relative;
+    bottom: 465px;
+}
+li div{
+
+}
+#img1 li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 100px;
+    background-color: #fff;
+}
+#img1{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    z-index: 9999;
+}
+#list-show-1{
+    margin: 0 auto;
+    position: absolute;
+    left: 100px;
+}
+#list-left div{
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+}
+#list-left div p{
+    position: relative;
+    top: 10px;
+
+}
+#list-left div:hover{
+    width: 100%;
+    height: 50px;
+    background-color: #D2691E;
+}
+.list-show-2-1{
+    position: absolute;
+    bottom: 412px;
+    left: 240px;
+}
+.list-show-2-1 li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 100px;
+}
+#list-left-1{
+    height: 30px;
+}

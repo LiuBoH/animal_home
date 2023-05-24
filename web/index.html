@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>首页</title>
+  <meta charset="utf-8">
+  <meta name = "format-detection" content = "telephone=no" />
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-migrate-1.1.1.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jquery.ui.totop.js"></script>
+  <script src="js/superfish.js"></script>
+  <script src="js/jquery.equalheights.js"></script>
+  <script src="js/jquery.mobilemenu.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/kwiks.js"></script>
+  <script>
+    $(document).ready(function(){
+      $().UItoTop({ easingType: 'easeOutQuart' });
+      var owl = $("#owl");
+      owl.owlCarousel({
+        items : 4, //10 items above 1000px browser width
+        itemsDesktop : [995,3], //5 items between 1000px and 901px
+        itemsDesktopSmall : [767, 2], // betweem 900px and 601px
+        itemsTablet: [700, 2], //2 items between 600 and 0
+        itemsMobile : [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+        navigation : true,
+      });
+    })
+    var Main = Main || {};
+    jQuery(window).load(function() {
+      window.responsiveFlag = jQuery('#responsiveFlag').css('display');
+      Main.gallery = new Gallery();
+      jQuery(window).resize(function() {
+        Main.gallery.update();
+      });
+    });
+    function Gallery(){
+      var self = this,
+              container = jQuery('.flexslider'),
+              clone = container.clone( false );
+      this.init = function (){
+        if( responsiveFlag == 'block' ){
+          var slides = container.find('.slides');
+          slides.kwicks({
+            max : 500,
+            spacing : 0
+          }).find('li > a').click(function (){
+            return false;
+          });
+        } else {
+          container.flexslider();
+        }
+      }
+      this.update = function () {
+        var currentState = jQuery('#responsiveFlag').css('display');
+        if(responsiveFlag != currentState) {
+          responsiveFlag = currentState;
+          container.replaceWith(clone);
+          container = clone;
+          clone = container.clone( false );
+          this.init();
+        }
+      }
+      this.init();
+    }
+  </script>
+  <!--[if lt IE 8]>
+  <div style=' clear: both; text-align:center; position: relative;'>
+    <a href="http//windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http//storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+    </a>
+  </div>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <link rel="stylesheet" media="screen" href="css/ie.css">
+  <![endif]-->
+  <style>
+    .image{
+      width: 55px;
+      height: 55px;
+    }
+  </style>
+</head>
+<body class="page1" id="top">
+<!--==============================header=================================-->
+<header>
+  <div class="clear"></div>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1>
+        <a href="index.html">
+          <img src="images/logoo.png" alt="Your Happy Family" class="image">
+        </a>
+      </h1>
+      <div class="menu_block">
+        <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+          <ul class="sf-menu">
+            <li class="current"><a href="index.html">首页</a></li>
+            <li><a href="index1.html">救助项目</a></li>
+            <li><a href="index2.html">关于我们 </a></li>
+            <li><a href="index4.jsp">信息</a></li>
+          </ul>
+        </nav>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <!--==============================Content=================================-->
+  <div class="content">
+    <div class="container_12">
+      <div class="grid_8">
+        <div class="flexslider">
+          <ul class="slides">
+            <li>
+              <img src="images/animal1.png" alt="">
+              <div class="flex-caption">
+                <p>Love</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/animal2.jpg" alt="">
+              <div class="flex-caption c2">
+                <p>Save</p>
+              </div>
+            </li>
+            <li>
+              <img src="images/animal3.jpg" alt="">
+              <div class="flex-caption">
+                <p>Help</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <span id="responsiveFlag"></span>
+      </div>
+      <div class="grid_4">
+        <a href="#" class="donate">爱心救助</a>
+        <div class="text1">爱心行动 · 你我同行</div>
+        <p>我们始终相信：
+          作为人类，为解决流浪动物的问题贡献出自己的一份力量，争取让每一个动物都能有一个温暖的家~</p>
+        据不完全调查统计，全世界约有6亿流浪动物，在我国就超过5000万只流浪猫犬，它们吃不饱、睡不暖，随时随地需要应对生存的考验。
+        主要原因是人类遗弃，以及被遗弃的宠物未绝育，导致过度繁衍，这个数字以惊人的速度在不断地增长。 目前社会上流浪宠物的生活现状依旧不容乐观，在社会不断发展的今天，如何更好的关爱流浪宠物的群体，仍然值得我们关注~
+      </div>
+      <div class="clear"></div>
+      <div class="grid_3">
+        <div class="block2 maxheight">
+          <div class="title">我们的宗旨</div>
+          <div class="pad">
+            旨在提供给有领养/送养需求的爱宠人士进行联系交流<div class="alright"></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_3">
+        <div class="block2 maxheight">
+          <div class="title">救助行动</div>
+          <div class="pad">
+            为流浪宠物基地和小院开展帮扶和救助工作，除了帮助流浪小院建设基地工作，同时开展小院筹粮活动，改善基地宠物的生活水平<div class="alright"></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_3">
+        <div class="block2 maxheight">
+          <div class="title">爱心宣传</div>
+          <div class="pad">
+            全国开展关爱流浪宠物救助的公益活动，同时开展社区文明养宠的宣传工作，提高人们的爱宠意识为目的<div class="alright"></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid_3">
+        <div class="block2 maxheight">
+          <div class="title">公益合作</div>
+          <div class="pad">对接全国的企业，学校，医院进行合作，通过社会+企业力量解决流浪宠物的生存问题<div class="alright"></div></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="grid_12">
+        <h2>您可以领养他们</h2>
+        <div id="owl">
+          <div class="item">
+            <a href="#"><img src="images/animal4.jpg" alt="">姜饼 <br>
+              8个月</a>
+          </div>
+          <div class="item it1">
+            <a href="#"><img src="images/animal5.jpg" alt="">苹果 <br>
+              4个月</a>
+          </div>
+          <div class="item it2">
+            <a href="#"><img src="images/animal6.jpg" alt="">八公 <br>
+              5个月</a>
+          </div>
+          <div class="item it3">
+            <a href="#"><img src="images/animal7.jpg" alt="">妮妮  <br>
+              6个月</a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="images/animal8.jpg" alt="">黑帅 <br>
+              1岁</a>
+          </div>
+          <div class="item it1">
+            <a href="#"><img src="images/animal9.jpg" alt="">红茶 <br>
+              3个月</a>
+          </div>
+          <div class="item it2">
+            <a href="#"><img src="images/animal10.jpg" alt="">甘甘 <br>
+              1岁半</a>
+          </div>
+          <div class="item it3">
+            <a href="#"><img src="images/animal11.jpg" alt="">闹闹  <br>
+              6个月</a>
+          </div>
+        </div>
+      </div>
+      <div class="grid_4">
+        <h3 class="nowrap mb0">成功历程</h3>
+        <time class="st1" datetime="">2021</time>
+        平台自正式运营4年以来，一直秉承“让天下不再有流浪的宠物”这一宗旨，为更好更有效的帮助这些流浪宠物，
+        益宠平台进行全方位升级并改名为“募怜它”全称为募怜它益宠同盟会
+      </div>
+      <div class="grid_7 prefix_1">
+        <h3>关于我们</h3>
+        <img src="images/us.jpg" alt="" class="img_inner fleft">
+        <div class="extra_wrapper">
+          <p>身为求救人的您可以说出自己的困难，向广大的爱心人士请求援助，让大家看到，原来救助不只是动保立法、不只是拦狗车，
+            而是我们点滴之间的身体力行，来引导社会关爱动物的正能量。有千千万万像您一样为流浪动物无私奉献的人；</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <!--==============================footer=================================-->
+  <footer>
+    <div class="hor bg3"></div>
+    <div class="container_12">
+      <div class="grid_12 ">
+        <div class="socials">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
